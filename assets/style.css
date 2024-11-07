@@ -70,23 +70,29 @@ body {
 
 /* hero */
 
+.hero-container {
+  position: relative; /* Posiziona il contenitore in modo che il testo possa essere posizionato sopra */
+}
+
 .hero {
-  height: 50vh;
-  background-image: url(./img/hero/hero.jpg);
-  background-position: top;
-  background-size: cover;
-  display: flex;
-  align-items: end;
-  border-bottom: 4px solid #e93809;
+  height: 50vh; /* Altezza fissa */
+  width: 100%; /* Larghezza piena */
+  object-fit: cover; /* Assicura che l'immagine riempia l'area senza distorsioni */
+  object-position: center 60%; /* Posiziona l'immagine tra il centro e il fondo */
 }
 
 .hero-text {
+  position: absolute; /* Posiziona il testo sopra l'immagine */
+  bottom: 20px; /* Distanza dal fondo dell'immagine */
+  color: white; /* Colore del testo bianco */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Aggiungi un'ombra al testo per migliorare la leggibilità */
   padding: 1.5rem 4rem;
   font-size: clamp(2rem, 4vw, 4rem);
   width: fit-content;
   background-color: #173081;
   border-radius: 0 6px 0 0;
   margin: 0;
+  right: 0px;
 }
 
 section {
@@ -107,4 +113,8 @@ section {
 
 .chi-sono-img-1 {
   transform: translateX(-100px) translateY(75px);
+}
+
+li {
+  margin-top: 15px;
 }
